@@ -44,7 +44,9 @@ module ThoughtBot # :nodoc:
           end
         end
       end
-
+      
+      alias should_require_attribute should_require_attributes
+      
       # Ensures that the model cannot be saved if one of the attributes listed is not unique.
       # Requires an existing record
       #
@@ -93,7 +95,9 @@ module ThoughtBot # :nodoc:
           end
         end
       end
-
+      
+      alias should_require_unique_attribute should_require_unique_attributes
+      
       # Ensures that the attribute cannot be set on mass update.
       # Requires an existing record.
       #
@@ -116,6 +120,8 @@ module ThoughtBot # :nodoc:
           end
         end
       end
+      
+      alias should_protect_attribute should_protect_attributes
   
       # Ensures that the attribute cannot be set to the given values
       # Requires an existing record
